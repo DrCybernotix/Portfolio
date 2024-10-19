@@ -3231,7 +3231,8 @@ button:disabled,
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  background-color: #2e3450;
+  background-color: #2E3450;
+  background-image: linear-gradient(90deg, #2E3450, black);
 }
 
 .spotlights > section > .image {
@@ -3785,7 +3786,7 @@ body.is-preload #header.alt {
 
 #banner.style2:after {
   background-color: black; /* For browsers that do not support gradients */
-  background-image: linear-gradient(90deg, rgb(121, 43, 121), black);
+  background-image: linear-gradient(90deg, #7A5299, black);
 }
 
 #banner.style3:after {
@@ -4232,4 +4233,21 @@ body.is-menu-visible #menu .inner {
   transform: none;
   opacity: 1;
   visibility: visible;
+}
+#dynamic-images .image-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for n images */
+  justify-content: space-between; /* Ensures even spacing between images */
+}
+
+#dynamic-images .image-column {
+  flex: 1;
+  padding: 10px;
+  max-width: calc(100% / 3); /* Adjust for the number of images you want per row */
+}
+
+#dynamic-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Adds rounded corners */
 }
